@@ -19,41 +19,43 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/image_flag_1"
             android:layout_width="70dp"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@android:color/holo_blue_bright" />
+            android:scaleType="fitXY"
+            />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/image_flag_2"
             android:layout_width="70dp"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@android:color/holo_blue_bright" />
+            android:scaleType="fitXY" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/image_flag_3"
             android:layout_width="70dp"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@android:color/holo_blue_bright" />
+            android:scaleType="fitXY" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/image_flag_4"
             android:layout_width="70dp"
             android:layout_height="65dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@android:color/holo_blue_bright" />
+            android:scaleType="fitXY" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -73,6 +75,7 @@
             android:layout_height="94dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
 
         <ImageView
@@ -81,6 +84,7 @@
             android:layout_height="94dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
 
         <ImageView
@@ -89,6 +93,7 @@
             android:layout_height="94dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
     </LinearLayout>
 
@@ -112,6 +117,7 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
 
         <ImageView
@@ -122,6 +128,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
 
         <ImageView
@@ -132,6 +139,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_red_light" />
     </LinearLayout>
 
@@ -148,9 +156,10 @@
         app:layout_constraintVertical_bias="0.064">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/image_big"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY"
             app:srcCompat="@android:color/holo_green_light" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
