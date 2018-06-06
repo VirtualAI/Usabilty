@@ -6,13 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/id_layout_flags"
+        android:layout_width="100dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+        <ImageView
+            android:id="@+id/image_flag_1"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@android:color/holo_blue_bright" />
+
+        <ImageView
+            android:id="@+id/image_flag_2"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@android:color/holo_blue_bright" />
+
+        <ImageView
+            android:id="@+id/image_flag_3"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@android:color/holo_blue_bright" />
+
+        <ImageView
+            android:id="@+id/image_flag_4"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@android:color/holo_blue_bright" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_layout_small_images_1"
+        android:layout_width="100dp"
+        android:layout_height="295dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_small_1"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:srcCompat="@android:color/holo_red_light" />
+
+        <ImageView
+            android:id="@+id/image_small_2"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:srcCompat="@android:color/holo_red_light" />
+
+        <ImageView
+            android:id="@+id/image_small_3"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:srcCompat="@android:color/holo_red_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_layout_small_images_2"
+        android:layout_width="316dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962">
+
+        <ImageView
+            android:id="@+id/image_small_4"
+            android:layout_width="100dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@android:color/holo_red_light" />
+
+        <ImageView
+            android:id="@+id/image_small_5"
+            android:layout_width="100dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@android:color/holo_red_light" />
+
+        <ImageView
+            android:id="@+id/image_small_6"
+            android:layout_width="100dp"
+            android:layout_height="94dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@android:color/holo_red_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_main_image_layout"
+        android:layout_width="361dp"
+        android:layout_height="187dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:color/holo_green_light" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
