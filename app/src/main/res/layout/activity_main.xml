@@ -5,24 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/id_layout_all"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+
+        android:orientation="horizontal"
+      >
 
     <LinearLayout
         android:id="@+id/id_layout_flags"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
         android:layout_weight="1"
-        android:layout_marginTop="8dp"
+        android:padding="5dp"
         android:orientation="vertical"
-        android:padding="5dp">
+        >
 
         <ImageButton
             android:id="@+id/image_flag_1"
-            android:layout_width="70dp"
+            android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+
+
             android:padding="0dp"
             android:scaleType="fitXY"
             android:src="@drawable/flag_ger" />
@@ -30,11 +38,11 @@
 
         <ImageButton
             android:id="@+id/image_flag_2"
-            android:layout_width="70dp"
+            android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
+
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:padding="0dp"
             android:scaleType="fitXY"
             android:layout_weight="1"
@@ -42,134 +50,143 @@
 
         <ImageButton
             android:id="@+id/image_flag_3"
-            android:layout_width="70dp"
+            android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
+
             android:layout_marginTop="5dp"
             android:padding="0dp"
-            android:layout_weight="1"
+
             android:scaleType="fitXY"
             android:src="@drawable/flag_fra" />
 
         <ImageButton
             android:id="@+id/image_flag_4"
-            android:layout_width="70dp"
+            android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="5dp"
+
 
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
+
             android:padding="0dp"
             android:layout_weight="1"
             android:scaleType="fitXY"
             android:src="@drawable/flag_spa" />
 
     </LinearLayout>
-
-
     <LinearLayout
-        android:id="@+id/id_layout_small_images_1"
-        android:layout_width="100dp"
-        android:layout_height="295dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/id_allImages"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
 
-        <ImageView
-            android:id="@+id/image_small_1"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
-
-        <ImageView
-            android:id="@+id/image_small_2"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
-
-        <ImageView
-            android:id="@+id/image_small_3"
-            android:layout_width="match_parent"
-            android:layout_height="94dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/id_layout_small_images_2"
-        android:layout_width="316dp"
-        android:layout_height="100dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962">
+        android:padding="5dp">
+        <LinearLayout
+            android:id="@+id/id_layout_small_images_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
 
-        <ImageView
-            android:id="@+id/image_small_4"
-            android:layout_width="100dp"
-            android:layout_height="94dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
+            <ImageView
+                android:id="@+id/image_small_1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
 
-        <ImageView
-            android:id="@+id/image_small_5"
-            android:layout_width="100dp"
-            android:layout_height="94dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitXY"
 
-        <ImageView
-            android:id="@+id/image_small_6"
-            android:layout_width="100dp"
-            android:layout_height="94dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="4dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
+                app:srcCompat="@android:color/darker_gray" />
+
+            <ImageView
+                android:id="@+id/image_small_2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@android:color/darker_gray" />
+
+            <ImageView
+                android:id="@+id/image_small_3"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+
+                android:scaleType="fitXY"
+                app:srcCompat="@android:color/darker_gray" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/id_layout_bigandsmall"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            >
+            <ImageView
+                android:id="@+id/image_big"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.1"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="5dp"
+
+                app:srcCompat="@android:color/darker_gray" />
+            <LinearLayout
+                android:id="@+id/id_layout_small_images_2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/image_small_4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+
+
+                    android:layout_marginRight="5dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/image_small_5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/image_small_6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+
+                    android:layout_marginLeft="5dp"
+
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@android:color/darker_gray" />
+            </LinearLayout>
+        </LinearLayout>
+     </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/id_main_image_layout"
-        android:layout_width="361dp"
-        android:layout_height="187dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.969"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064">
-
-        <ImageView
-            android:id="@+id/image_big"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            app:srcCompat="@android:color/darker_gray" />
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
