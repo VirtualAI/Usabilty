@@ -154,7 +154,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
         small4 = (ImageView) findViewById(R.id.image_small_4);
         small5 = (ImageView) findViewById(R.id.image_small_5);
         small6 = (ImageView) findViewById(R.id.image_small_6);
-
+        resetImageViews();
         //Picasso.with(this).load("https://www.mehrcontainerfuerdeutschland.de/wp-content/uploads/sites/9/2017/02/Weniger-Schiffe-unter-deutscher-Flagge_Symbolfoto-c-pixabay.com_.jpg").into(FlagButton1);
 
         //Picasso.get().load("https://www.mehrcontainerfuerdeutschland.de/wp-content/uploads/sites/9/2017/02/Weniger-Schiffe-unter-deutscher-Flagge_Symbolfoto-c-pixabay.com_.jpg").into(FlagButton1);
@@ -320,13 +320,13 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     }
 
     public void resetImageViews() {
-        BigView.setImageResource(android.R.color.darker_gray);
-        small1.setImageResource(android.R.color.darker_gray);
-        small2.setImageResource(android.R.color.darker_gray);
-        small3.setImageResource(android.R.color.darker_gray);
-        small4.setImageResource(android.R.color.darker_gray);
-        small5.setImageResource(android.R.color.darker_gray);
-        small6.setImageResource(android.R.color.darker_gray);
+        BigView.setImageResource(android.R.color.transparent);
+        small1.setImageResource(android.R.color.transparent);
+        small2.setImageResource(android.R.color.transparent);
+        small3.setImageResource(android.R.color.transparent);
+        small4.setImageResource(android.R.color.transparent);
+        small5.setImageResource(android.R.color.transparent);
+        small6.setImageResource(android.R.color.transparent);
     }
 
     public void startRegognition(String lang) {
