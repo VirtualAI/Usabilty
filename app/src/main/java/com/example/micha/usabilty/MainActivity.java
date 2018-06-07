@@ -1,8 +1,12 @@
 package com.example.micha.usabilty;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.AsyncTask;
 import android.provider.DocumentsContract;
 import android.speech.RecognizerIntent;
@@ -11,6 +15,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -66,13 +72,20 @@ https://www.androidhive.info/2014/07/android-speech-to-text-tutorial/
  *
  * */
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+public class MainActivity extends Activity implements View.OnTouchListener {
     ImageButton FlagButton1;
     ImageButton FlagButton2;
     ImageButton FlagButton3;
     ImageButton FlagButton4;
-    String buttonBackgroundUnpressed = "#123456";
-    String buttonBackgroundPressed = "#666bff";
+
+
+    int buttonColor = Color.DKGRAY;
+    int buttonColorPressed = Color.GRAY;
+
+
+    final int semiTransparentGrey = Color.argb(155, 185, 185, 185);
+
+
     private final int REQ_CODE_SPEECH_INPUT = 100;
     //eventuell 2d array mit optionalen URLS, dann einfach weiterhüpfen falls lade fehler
 
@@ -93,47 +106,17 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     ImageView small5;
     ImageView small6;
     String language = "";
-    Thread thread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-
-            // can only grab first 100 results
-            String userAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36";
-            String url = "https://www.google.com/search?site=imghp&tbm=isch&source=hp&q=kittens&gws_rd=cr&n=10";
-
-            List<String> resultUrls = new ArrayList<String>();
-
-            try {
-                Document doc = Jsoup.connect(url).userAgent(userAgent).referrer("https://www.google.com/").get();
-
-                Elements elements = doc.select("div.rg_meta");
-
-                JSONObject jsonObject;
-                for (Element element : elements) {
-                    if (element.childNodeSize() > 0) {
-                        jsonObject = (JSONObject) new JSONParser().parse(element.childNode(0).toString());
-                        resultUrls.add((String) jsonObject.get("ou"));
-                    }
-                }
-
-                Log.d("URLS", "number of results: " + resultUrls.size());
-
-                for (String imageUrl : resultUrls) {
-                    Log.d("Image LOAD Error", imageUrl);
-
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (org.json.simple.parser.ParseException e) {
-                e.printStackTrace();
-            }
-        }
-    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+      //  this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+      //  this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
         setContentView(R.layout.activity_main);
 
 
@@ -153,16 +136,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         FlagButton4.setOnTouchListener(this);
         this.FlagButton4 = FlagButton4;
 
-        FlagButton1.setImageResource(R.drawable.flag_ger);
-        FlagButton2.setImageResource(R.drawable.flag_bri);
-        FlagButton3.setImageResource(R.drawable.flag_fra);
-        FlagButton4.setImageResource(R.drawable.flag_spa);
+        //   FlagButton1.setImageResource(R.drawable.flag_ger);
+        // FlagButton2.setImageResource(R.drawable.flag_bri);
+        //     FlagButton3.setImageResource(R.drawable.flag_fra);
+        //    FlagButton4.setImageResource(R.drawable.flag_spa);
 
 
-        FlagButton1.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
-        FlagButton2.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
-        FlagButton3.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
-        FlagButton4.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
+        FlagButton1.setBackgroundColor(buttonColor);
+        FlagButton2.setBackgroundColor(buttonColor);
+        FlagButton3.setBackgroundColor(buttonColor);
+        FlagButton4.setBackgroundColor(buttonColor);
 
         BigView = (ImageView) findViewById(R.id.image_big);
         small1 = (ImageView) findViewById(R.id.image_small_1);
@@ -337,7 +320,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
     public void resetImageViews() {
-
+        BigView.setImageResource(android.R.color.darker_gray);
+        small1.setImageResource(android.R.color.darker_gray);
+        small2.setImageResource(android.R.color.darker_gray);
+        small3.setImageResource(android.R.color.darker_gray);
+        small4.setImageResource(android.R.color.darker_gray);
+        small5.setImageResource(android.R.color.darker_gray);
+        small6.setImageResource(android.R.color.darker_gray);
     }
 
     public void startRegognition(String lang) {
@@ -409,7 +398,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 switch (v.getId()) {
                     case R.id.image_flag_1: {
                         Toast.makeText(getApplicationContext(), "Deutsch", Toast.LENGTH_SHORT).show();
-                        FlagButton1.setBackgroundColor(Color.parseColor(buttonBackgroundPressed));
+                     //   FlagButton1.setBackgroundColor(buttonColorPressed);
+
+                        FlagButton1.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
 
 
                         startRegognition("GER");
@@ -419,19 +410,22 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     }
                     case R.id.image_flag_2: {
                         Toast.makeText(getApplicationContext(), "English", Toast.LENGTH_SHORT).show();
-                        FlagButton2.setBackgroundColor(Color.parseColor(buttonBackgroundPressed));
+                      //  FlagButton2.setBackgroundColor(buttonColorPressed);
+                        FlagButton2.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
                         startRegognition("ENG");
                         break;
                     }
                     case R.id.image_flag_3: {
                         Toast.makeText(getApplicationContext(), "Français", Toast.LENGTH_SHORT).show();
-                        FlagButton3.setBackgroundColor(Color.parseColor(buttonBackgroundPressed));
+                    //    FlagButton3.setBackgroundColor(buttonColorPressed);
+                        FlagButton3.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
                         startRegognition("FRA");
                         break;
                     }
                     case R.id.image_flag_4: {
                         Toast.makeText(getApplicationContext(), "Español", Toast.LENGTH_SHORT).show();
-                        FlagButton4.setBackgroundColor(Color.parseColor(buttonBackgroundPressed));
+                    //    FlagButton4.setBackgroundColor(buttonColorPressed);
+                        FlagButton4.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
                         startRegognition("ESP");
                         break;
                     }
@@ -441,19 +435,19 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 switch (v.getId()) {
                     case R.id.image_flag_1: {
 
-                        FlagButton1.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
+                        FlagButton1.setColorFilter(null);
                         break;
                     }
                     case R.id.image_flag_2: {
-                        FlagButton2.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
+                        FlagButton2.setColorFilter(null);
                         break;
                     }
                     case R.id.image_flag_3: {
-                        FlagButton3.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
+                        FlagButton3.setColorFilter(null);
                         break;
                     }
                     case R.id.image_flag_4: {
-                        FlagButton4.setBackgroundColor(Color.parseColor(buttonBackgroundUnpressed));
+                        FlagButton4.setColorFilter(null);
                         break;
                     }
                 }

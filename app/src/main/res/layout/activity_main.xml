@@ -27,7 +27,9 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:scaleType="fitXY"
-            />
+            android:padding="0dp"
+            android:src="@drawable/flag_ger"/>
+
 
         <ImageButton
             android:id="@+id/image_flag_2"
@@ -36,7 +38,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:src="@drawable/flag_bri"/>
 
         <ImageButton
             android:id="@+id/image_flag_3"
@@ -45,7 +49,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:src="@drawable/flag_fra"/>
 
         <ImageButton
             android:id="@+id/image_flag_4"
@@ -54,7 +60,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:padding="0dp"
+            android:src="@drawable/flag_spa"/>
 
     </LinearLayout>
 
@@ -76,7 +84,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
             android:id="@+id/image_small_2"
@@ -85,7 +93,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
             android:id="@+id/image_small_3"
@@ -94,7 +102,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
     </LinearLayout>
 
     <LinearLayout
@@ -118,7 +126,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
             android:id="@+id/image_small_5"
@@ -129,7 +137,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
 
         <ImageView
             android:id="@+id/image_small_6"
@@ -140,7 +148,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginTop="4dp"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_red_light" />
+            app:srcCompat="@android:color/darker_gray" />
     </LinearLayout>
 
     <LinearLayout
@@ -160,6 +168,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            app:srcCompat="@android:color/holo_green_light" />
+            app:srcCompat="@android:color/darker_gray" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
