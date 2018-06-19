@@ -303,7 +303,7 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     }
 
     public void getImageURL(String SearchTerm) {
-        new RetrieveFeedTask().execute(SearchTerm);
+        new RetrieveFeedTask().execute(SearchTerm+" symbol");
 
 
     }
